@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Central Privada de Herramientas</title>
+  <meta name="description" content="Panel privado para acceder a herramientas digitales, generadores y automatizaciones." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="logo">⚡</div>
+      <h1>Central Privada</h1>
+      <p>Accede a tu panel de herramientas digitales.</p>
+
+      <input 
+        type="password" 
+        id="passwordInput" 
+        placeholder="Introduce la clave"
+      />
+
+      <button onclick="entrarPanel()">Entrar al panel</button>
+
+      <small id="errorMsg"></small>
+    </div>
+  </section>
+
+  <main id="panelScreen" class="panel hidden">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>Central Pro</h2>
+          <span>Herramientas privadas</span>
+        </div>
+      </div>
+
+      <nav>
+        <button class="filter-btn active" data-category="todas">Todas</button>
+        <button class="filter-btn" data-category="web">Webs</button>
+        <button class="filter-btn" data-category="google">Google Business</button>
+        <button class="filter-btn" data-category="clientes">Clientes</button>
+        <button class="filter-btn" data-category="contenido">Contenido</button>
+        <button class="filter-btn" data-category="prompts">Prompts</button>
+      </nav>
+
+      <button class="logout" onclick="cerrarSesion()">Cerrar sesión</button>
+    </aside>
+
+    <section class="content">
+      <header class="topbar">
+        <div>
+          <h1>Centro de Herramientas</h1>
+          <p>Todas tus herramientas organizadas en un solo sitio.</p>
+        </div>
+
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Buscar herramienta..."
+        />
+      </header>
+
+      <section class="stats">
+        <div>
+          <strong id="totalTools">0</strong>
+          <span>Herramientas</span>
+        </div>
+        <div>
+          <strong>Privado</strong>
+          <span>Acceso con clave</span>
+        </div>
+        <div>
+          <strong>PRO</strong>
+          <span>Preparado para crecer</span>
+        </div>
+      </section>
+
+      <section id="toolsGrid" class="tools-grid">
+
+        <article class="tool-card" data-category="prompts">
+          <div class="tool-icon">🧠</div>
+          <span class="tag">Prompts</span>
+          <h3>Generador de Prompts</h3>
+          <p>Crea prompts profesionales para webs, SEO, contenido, automatizaciones y herramientas.</p>
+          <a href="#" class="open-btn">Próximamente</a>
+        </article>
+
+        <article class="tool-card" data-category="web">
+          <div class="tool-icon">🌐</div>
+          <span class="tag">Webs</span>
+          <h3>Generador de Webs</h3>
+          <p>Genera páginas web profesionales para negocios locales con estructura SEO y llamadas a la acción.</p>
+          <a href="#" class="open-btn">Abrir herramienta</a>
+        </article>
+
+        <article class="tool-card" data-category="google">
+          <div class="tool-icon">📍</div>
+          <span class="tag">Google Business</span>
+          <h3>Optimizador Google Business</h3>
+          <p>Organiza categorías, servicios, descripción, publicaciones y mejoras para fichas de negocio.</p>
+          <a href="#" class="open-btn">Abrir herramienta</a>
+        </article>
+
+        <article class="tool-card" data-category="clientes">
+          <div class="tool-icon">📁</div>
+          <span class="tag">Clientes</span>
+          <h3>Control de Clientes</h3>
+          <p>Gestiona webs vendidas, contraseñas, dominios, servicios contratados y estado de cada proyecto.</p>
+          <a href="#" class="open-btn">Próximamente</a>
+        </article>
+
+        <article class="tool-card" data-category="clientes">
+          <div class="tool-icon">💶</div>
+          <span class="tag">Clientes</span>
+          <h3>Generador de Presupuestos</h3>
+          <p>Crea presupuestos profesionales para webs, SEO, Google Business, mantenimiento y servicios digitales.</p>
+          <a href="#" class="open-btn">Abrir herramienta</a>
+        </article>
+
+        <article class="tool-card" data-category="contenido">
+          <div class="tool-icon">✍️</div>
+          <span class="tag">Contenido</span>
+          <h3>Generador de Textos</h3>
+          <p>Crea textos para redes sociales, WhatsApp, anuncios, publicaciones y captación de clientes.</p>
+          <a href="#" class="open-btn">Próximamente</a>
+        </article>
+
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
